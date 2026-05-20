@@ -15,16 +15,16 @@
  * ─── If you got this file from GitHub ─────────────────────────────────────
  * 1. Upload this file to YOUR web hosting (PHP), e.g. public_html/backrun.php
  *    (GitHub only hosts the source; PHP must run on your server.)
- * 2. Replace SECRET_KEY below with your own long random string (32+ chars).
- *    Same value must be pasted in the extension → Options → Host Agent → Secret key.
+ * 2. Copy SECRET_KEY below into the extension → Options → Host Agent → Secret key
+ *    (default is ready to use). Change it in this file and in the extension for better security.
  * 3. In the extension, set Agent URL to https://your-domain.com/backrun.php
  */
 
 // =============================================================================
-//  SECRET KEY — MUST be unique on your server; never use the example value
-//  in production. Chrome → HTML Deployer → Extension options → Host Agent
+//  SECRET KEY — copy into extension → Options → Host Agent → Secret key
+//  Default below works out of the box (32 chars). Change here + in extension if you want.
 // =============================================================================
-define('SECRET_KEY', 'CHANGE_ME_USE_YOUR_OWN_RANDOM_SECRET_32_CHARS_MIN');
+define('SECRET_KEY', 'BACKRUNDEFAULTHOSTAGENTSECRETS32');
 // =============================================================================
 
 /** Max HTML payload size (2 MB). */
