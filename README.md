@@ -54,4 +54,4 @@ Use and modify for your own hosting in connection with HTML Deployer. If you red
 ## Links
 
 - **HTML Deployer** (product & docs): [backrun.co/html-deployer/](https://backrun.co/html-deployer/)
-- **Chrome extension**: install from the Chrome Web Store page linked on the site above.
+- **Chrome extension**: [Install](https://chromewebstore.google.com/detail/html-deployer-1-click-ai/gihmknkabkkghpiocgnoiejagngdegea)
