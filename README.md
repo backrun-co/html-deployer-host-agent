@@ -9,11 +9,17 @@
 ## Quick start
 
 1. **Download** `backrun.php` from this repo (Raw file or Releases).
-2. **Edit** `SECRET_KEY` in the file — use a long random string (32+ characters). Do **not** use the example placeholder on a public server.
-3. **Upload** the file to your site, e.g. `https://example.com/backrun.php`.
-4. In the extension: **Extension options → Host Agent →** paste **Agent URL** and the same **Secret key** → **Test Connection** → Save.
+2. **Secret key** — the file includes a **32-character default** you can use immediately (copy from `SECRET_KEY` in `backrun.php`, or use this value):
 
-You can also generate a fresh script (with a random key already inserted) from the extension: **Options → Host Agent → Download agent script** (served from the product server).
+   ```
+   BACKRUNDEFAULTHOSTAGENTSECRETS32
+   ```
+
+   Paste it into the extension under **Options → Host Agent → Secret key**. Optional: replace it with your own random string (32+ characters) in **both** `backrun.php` and the extension.
+3. **Upload** the file to your site, e.g. `https://example.com/backrun.php`.
+4. In the extension: **Extension options → Host Agent →** set **Agent URL** (your `backrun.php` link), **Secret key** (step 2) → **Test Connection** → Save.
+
+**Other download:** From the Chrome extension — **Options → Host Agent → Download agent script directly** — you get a fresh `backrun.php` with a **random** key already filled in (different from the GitHub default above).
 
 ---
 
@@ -33,6 +39,7 @@ Max payload size is defined in the file (default 2 MB).
 ## Security
 
 - Treat `SECRET_KEY` like a password. Anyone with the key can deploy HTML to your folder.
+- The **default key in this repo is public** (same for everyone who clones GitHub). Fine for quick tests; for a live site, **generate your own** key in `backrun.php` and in the extension.
 - Prefer **HTTPS** for the Agent URL.
 - After changing `SECRET_KEY` on the server, update the same value in the extension.
 
@@ -47,4 +54,4 @@ Use and modify for your own hosting in connection with HTML Deployer. If you red
 ## Links
 
 - **HTML Deployer** (product & docs): [backrun.co/html-deployer/](https://backrun.co/html-deployer/)
-- **Chrome extension**: [Install](https://chromewebstore.google.com/detail/html-deployer-1-click-ai/gihmknkabkkghpiocgnoiejagngdegea).
+- **Chrome extension**: install from the Chrome Web Store page linked on the site above.
